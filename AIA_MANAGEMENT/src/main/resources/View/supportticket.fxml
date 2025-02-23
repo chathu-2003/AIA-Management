@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="Supportticketpage" prefHeight="732.0" prefWidth="920.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.example.aia.aia_management.Controller.SupportTicketController">
+   <children>
+      <Pane layoutX="2.0" prefHeight="732.0" prefWidth="920.0" style="-fx-background-color: #c7ecee;">
+         <children>
+            <ImageView fitHeight="161.0" fitWidth="209.0" layoutX="-3.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/images%20(9).png" />
+               </image>
+            </ImageView>
+            <AnchorPane fx:id="PageSupportTicket" layoutX="288.0" layoutY="14.0" prefHeight="308.0" prefWidth="517.0">
+               <children>
+                  <Text layoutX="39.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SupportTicketId" wrappingWidth="118.13671875" />
+                  <Text layoutX="39.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CustomerId" wrappingWidth="129.13671875" />
+                  <Text layoutX="39.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="IssueDescription" wrappingWidth="129.13671875" />
+                  <Text layoutX="39.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status" wrappingWidth="129.13671875" />
+                  <TextField fx:id="TxtSupportTicketId" layoutX="211.0" layoutY="24.0" prefHeight="27.0" prefWidth="263.0" style="-fx-background-color: transparent; -fx-border-color: #0578; -fx-border-width: 0px 0px 2px 0px;" />
+                  <TextField fx:id="TxtCustomerId" layoutX="213.0" layoutY="95.0" prefHeight="27.0" prefWidth="263.0" style="-fx-background-color: transparent; -fx-border-color: #0578; -fx-border-width: 0px 0px 2px 0px;" />
+                  <TextField fx:id="TxtStatus" layoutX="213.0" layoutY="234.0" prefHeight="27.0" prefWidth="263.0" style="-fx-background-color: transparent; -fx-border-color: #0578; -fx-border-width: 0px 0px 2px 0px;" />
+                  <TextField fx:id="TxtIssueDescription" layoutX="211.0" layoutY="163.0" prefHeight="27.0" prefWidth="263.0" style="-fx-background-color: transparent; -fx-border-color: #0578; -fx-border-width: 0px 0px 2px 0px;" />
+               </children>
+            </AnchorPane>
+            <TableView fx:id="TableSupportTicket" layoutX="16.0" layoutY="343.0" onMouseClicked="#OnTableSupportTicket" prefHeight="261.0" prefWidth="631.0">
+              <columns>
+                <TableColumn fx:id="ColSupportTicketId" prefWidth="129.0" text="SupportTicketId" />
+                <TableColumn fx:id="ColCustomerId" prefWidth="146.0" text="CustomerId" />
+                  <TableColumn fx:id="ColIssueDescription" prefWidth="145.0" text="IssueDescription" />
+                  <TableColumn fx:id="ColStatus" prefWidth="210.0" text="Status" />
+              </columns>
+            </TableView>
+            <Button fx:id="BtnSave" layoutX="699.0" layoutY="378.0" mnemonicParsing="false" onAction="#BtnSaveOnAction" prefHeight="25.0" prefWidth="136.0" style="-fx-background-radius: 20; -fx-background-color: #ffeaa7;" text="Save" />
+            <Button fx:id="BtnUpdate" layoutX="701.0" layoutY="436.0" mnemonicParsing="false" onAction="#BtnUpdateOnAction" prefHeight="25.0" prefWidth="136.0" style="-fx-background-radius: 20; -fx-background-color: #ffeaa7;" text="Update" />
+            <Button fx:id="BtnDelete" layoutX="703.0" layoutY="492.0" mnemonicParsing="false" onAction="#BtnDeleteOnAction" prefHeight="25.0" prefWidth="136.0" style="-fx-background-radius: 20; -fx-background-color: #ffeaa7;" text="Delete" />
+            <Button fx:id="BtnBack" layoutX="704.0" layoutY="553.0" mnemonicParsing="false" onAction="#BtnBackOnAction" prefHeight="25.0" prefWidth="136.0" style="-fx-background-radius: 20; -fx-background-color: #ffeaa7;" text="Back" />
+            <TextField fx:id="TxtSearch" layoutX="16.0" layoutY="250.0" prefHeight="27.0" prefWidth="136.0" style="-fx-background-color: transparent; -fx-border-color: #0578; -fx-border-width: 0px 0px 2px 0px;" />
+            <Button fx:id="BtnSearch" layoutX="160.0" layoutY="255.0" mnemonicParsing="false" onAction="#BtnSearchOnAction" prefHeight="25.0" prefWidth="136.0" style="-fx-background-radius: 20; -fx-background-color: #ffeaa7;" text="Search" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

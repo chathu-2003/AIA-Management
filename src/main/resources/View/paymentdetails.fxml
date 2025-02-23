@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="pagePayment" prefHeight="732.0" prefWidth="920.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.example.aia.aia_management.Controller.PaymentDetailsController">
+   <children>
+      <Pane layoutY="6.0" prefHeight="732.0" prefWidth="920.0">
+         <children>
+            <ImageView fitHeight="732.0" fitWidth="920.0" layoutX="-1.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../images/download_(5)-transformed.jpeg" />
+               </image>
+            </ImageView>
+            <AnchorPane layoutX="14.0" layoutY="94.0" prefHeight="344.0" prefWidth="489.0">
+               <children>
+                  <Text layoutX="18.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PaymentId" wrappingWidth="128.13671875">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="18.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="status" wrappingWidth="158.13671875">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="18.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PolicyId" wrappingWidth="128.13671875">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="TxtPaymentId" layoutX="188.0" layoutY="18.0" prefHeight="25.0" prefWidth="201.0" style="-fx-background-color: transparent; -fx-border-color: #0578; -fx-border-width: 0px 0px 2px 0px;" />
+                  <TextField fx:id="TxtStatus" layoutX="184.0" layoutY="157.0" prefHeight="25.0" prefWidth="201.0" style="-fx-background-color: transparent; -fx-border-color: #0578; -fx-border-width: 0px 0px 2px 0px;" />
+                  <Button fx:id="BtnDelect" layoutX="274.0" layoutY="306.0" mnemonicParsing="false" onAction="#BtnDeleteOnAction" prefHeight="25.0" prefWidth="136.0" style="-fx-background-radius: 20; -fx-background-color: #ffeaa7;" text="Delect" />
+                  <Button fx:id="BtnBack" layoutX="14.0" layoutY="293.0" mnemonicParsing="false" onAction="#BtnBackOnAction" prefHeight="25.0" prefWidth="136.0" style="-fx-background-radius: 20; -fx-background-color: #ffeaa7;" text="Back" />
+                  <Text layoutX="18.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Month" wrappingWidth="158.13671875">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Text>
+                  <ComboBox fx:id="BoxMonth" layoutX="184.0" layoutY="219.0" onAction="#BoxMonthOnAction" prefHeight="25.0" prefWidth="201.0" />
+                  <TextField fx:id="TxtPolicy" layoutX="184.0" layoutY="90.0" prefHeight="25.0" prefWidth="201.0" style="-fx-background-color: transparent; -fx-border-color: #0578; -fx-border-width: 0px 0px 2px 0px;" />
+               </children>
+            </AnchorPane>
+            <TableView fx:id="TablePayment" layoutX="37.0" layoutY="447.0" onMouseClicked="#OnTablePayment" prefHeight="271.0" prefWidth="719.0">
+               <columns>
+                  <TableColumn fx:id="ColPaymentId" prefWidth="199.0" text="PaymentId" />
+                  <TableColumn fx:id="ColPolicy" prefWidth="158.0" text="PolicyId" />
+                  <TableColumn fx:id="ColStatus" prefWidth="202.0" text="status" />
+                  <TableColumn fx:id="ColMonth" prefWidth="211.0" text="Month" />
+               </columns>
+            </TableView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

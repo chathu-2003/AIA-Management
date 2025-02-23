@@ -1,0 +1,198 @@
+<!-- Created with Jaspersoft Studio version 7.0.0.final using JasperReports Library version 7.0.0-b478feaa9aab4375eba71de77b4ca138ad2f62aa  -->
+<jasperReport name="policyy" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9e24f264-3f30-40e8-a52a-c70536065d6e">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter (5)"/>
+	<query language="SQL"><![CDATA[select * from policy]]></query>
+	<field name="PolicyId" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="PolicyId"/>
+		<property name="com.jaspersoft.studio.field.label" value="PolicyId"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="policy"/>
+	</field>
+	<field name="PolicyNumber" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="PolicyNumber"/>
+		<property name="com.jaspersoft.studio.field.label" value="PolicyNumber"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="policy"/>
+	</field>
+	<field name="StartDate" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="StartDate"/>
+		<property name="com.jaspersoft.studio.field.label" value="StartDate"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="policy"/>
+	</field>
+	<field name="EndDate" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="EndDate"/>
+		<property name="com.jaspersoft.studio.field.label" value="EndDate"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="policy"/>
+	</field>
+	<field name="Premium" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="Premium"/>
+		<property name="com.jaspersoft.studio.field.label" value="Premium"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="policy"/>
+	</field>
+	<field name="Coverage" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Coverage"/>
+		<property name="com.jaspersoft.studio.field.label" value="Coverage"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="policy"/>
+	</field>
+	<field name="ManagerId" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="ManagerId"/>
+		<property name="com.jaspersoft.studio.field.label" value="ManagerId"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="policy"/>
+	</field>
+	<field name="UnderWriterId" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="UnderWriterId"/>
+		<property name="com.jaspersoft.studio.field.label" value="UnderWriterId"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="policy"/>
+	</field>
+	<group name="PolicyId">
+		<expression><![CDATA[$F{PolicyId}]]></expression>
+	</group>
+	<group name="PolicyNumber">
+		<expression><![CDATA[$F{PolicyNumber}]]></expression>
+	</group>
+	<group name="StartDate">
+		<expression><![CDATA[$F{StartDate}]]></expression>
+	</group>
+	<group name="EndDate">
+		<expression><![CDATA[$F{EndDate}]]></expression>
+	</group>
+	<group name="Premium">
+		<expression><![CDATA[$F{Premium}]]></expression>
+	</group>
+	<group name="Coverage">
+		<expression><![CDATA[$F{Coverage}]]></expression>
+	</group>
+	<group name="ManagerId">
+		<expression><![CDATA[$F{ManagerId}]]></expression>
+	</group>
+	<group name="UnderWriterId">
+		<expression><![CDATA[$F{UnderWriterId}]]></expression>
+	</group>
+	<background splitType="Stretch"/>
+	<title height="79" splitType="Stretch">
+		<element kind="staticText" uuid="62ef73a5-d265-4e57-aa70-83a36825aa73" x="72" y="0" width="483" height="76" forecolor="#E3403D" fontSize="26.0">
+			<text><![CDATA[              Policy Details Report]]></text>
+		</element>
+	</title>
+	<pageHeader height="35" splitType="Stretch"/>
+	<columnHeader height="61" splitType="Stretch">
+		<element kind="staticText" uuid="ae9ee271-e0f9-4473-8601-3dfe4fcda20e" x="0" y="0" width="72" height="30">
+			<text><![CDATA[PolicyId]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fdcdb7ef-0755-49ec-984d-bd11ef332221"/>
+			<box>
+				<pen lineWidth="1.0" lineStyle="Solid"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="abd1563c-5f69-47a9-9826-2e51470d87a1" x="72" y="0" width="69" height="30">
+			<text><![CDATA[PolicyNumber]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e0499e1a-a277-47f4-960b-4fff44299743"/>
+			<box>
+				<pen lineWidth="1.0" lineStyle="Solid"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="df6bef02-fdab-41fa-9a38-5b96742acd53" x="141" y="0" width="69" height="30">
+			<text><![CDATA[StartDate]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9b6f1329-ccc3-4a95-989a-0b71640b3b01"/>
+			<box>
+				<pen lineWidth="1.0" lineStyle="Solid"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="346a2a64-b8f4-4183-a8b4-019796b3211e" x="210" y="0" width="69" height="30">
+			<text><![CDATA[EndDate]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6b4e9837-362c-4d01-a153-f637ace07f27"/>
+			<box>
+				<pen lineWidth="1.0" lineStyle="Solid"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="bce3bff3-d27a-4c5a-9c0b-f9d553b2c562" x="279" y="0" width="69" height="30">
+			<text><![CDATA[Premium]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="449b11f9-7e71-48a6-b8b1-ff03e1734d05"/>
+			<box>
+				<pen lineWidth="1.0" lineStyle="Solid"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="c66a5f60-6832-4212-af57-023c920fcdd3" x="348" y="0" width="69" height="30">
+			<text><![CDATA[Coverage]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="70d07536-1604-4518-8d60-5263c03c86fd"/>
+			<box>
+				<pen lineWidth="1.0" lineStyle="Solid"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="af7bb47b-68d6-4f16-bb67-600d6c316926" x="417" y="0" width="69" height="30">
+			<text><![CDATA[ManagerId]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bfc28247-47b0-4c34-884a-8b5a9b4235f5"/>
+			<box>
+				<pen lineWidth="1.0" lineStyle="Solid"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="6486aa74-58b6-43fe-8606-6c92dea480b8" x="486" y="0" width="69" height="30">
+			<text><![CDATA[UnderWriterId]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bfa84e40-2962-4228-8101-068c42337f7d"/>
+			<box>
+				<pen lineWidth="1.0" lineStyle="Solid"/>
+			</box>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="149" splitType="Stretch">
+			<element kind="textField" uuid="2bec6227-d7dc-40bf-a2ce-63fc1b0712b7" x="0" y="0" width="72" height="30">
+				<expression><![CDATA[$F{PolicyId}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fdcdb7ef-0755-49ec-984d-bd11ef332221"/>
+				<box>
+					<pen lineStyle="Solid"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="cf3fbf7e-b15e-44ff-bd68-d756b971be94" x="72" y="0" width="69" height="30">
+				<expression><![CDATA[$F{PolicyNumber}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e0499e1a-a277-47f4-960b-4fff44299743"/>
+				<box>
+					<pen lineStyle="Solid"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="c5b1265a-b8de-4582-aa24-c9fc070ad0b5" x="141" y="0" width="69" height="30">
+				<expression><![CDATA[$F{StartDate}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9b6f1329-ccc3-4a95-989a-0b71640b3b01"/>
+				<box>
+					<pen lineStyle="Solid"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="f746c941-9203-4519-92ae-0021956a063c" x="210" y="0" width="69" height="30">
+				<expression><![CDATA[$F{EndDate}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6b4e9837-362c-4d01-a153-f637ace07f27"/>
+				<box>
+					<pen lineStyle="Solid"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="6888dad9-639f-4017-8c04-ebd012835719" x="279" y="0" width="69" height="30">
+				<expression><![CDATA[$F{Premium}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="449b11f9-7e71-48a6-b8b1-ff03e1734d05"/>
+				<box>
+					<pen lineStyle="Solid"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="f78ef1d0-7673-4ee7-a16d-f92593954082" x="348" y="0" width="69" height="30">
+				<expression><![CDATA[$F{Coverage}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="70d07536-1604-4518-8d60-5263c03c86fd"/>
+				<box>
+					<pen lineStyle="Solid"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="7c5d9442-a25f-4ecb-b164-d2abe22081c6" x="417" y="0" width="69" height="30">
+				<expression><![CDATA[$F{ManagerId}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bfc28247-47b0-4c34-884a-8b5a9b4235f5"/>
+				<box>
+					<pen lineStyle="Solid"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="def7ff67-8928-4fe2-921e-ec86b3a9a674" x="486" y="0" width="69" height="30">
+				<expression><![CDATA[$F{UnderWriterId}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bfa84e40-2962-4228-8101-068c42337f7d"/>
+				<box>
+					<pen lineStyle="Solid"/>
+				</box>
+			</element>
+		</band>
+	</detail>
+	<columnFooter height="45" splitType="Stretch"/>
+	<pageFooter height="54" splitType="Stretch"/>
+	<summary height="42" splitType="Stretch"/>
+</jasperReport>

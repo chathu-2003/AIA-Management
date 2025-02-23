@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="PageClaim" prefHeight="732.0" prefWidth="920.0" style="-fx-background-color: #c7ecee;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.example.aia.aia_management.Controller.ClaimController">
+   <children>
+      <Pane prefHeight="738.0" prefWidth="926.0">
+         <children>
+            <ImageView fitHeight="173.0" fitWidth="205.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/images%20(9).png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="731.0" fitWidth="978.0" layoutX="6.0" layoutY="9.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../images/download%20(4).jpeg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <AnchorPane layoutX="235.0" layoutY="24.0" prefHeight="356.0" prefWidth="335.0" style="-fx-background-color: #fab1a0;">
+         <children>
+            <Text layoutX="57.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ClaimId" wrappingWidth="151.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="55.0" layoutY="284.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ClaimDate" wrappingWidth="151.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="56.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ClaimAmount" wrappingWidth="151.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="58.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PolicyId" wrappingWidth="151.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Button fx:id="BtnSearch" layoutX="164.0" layoutY="308.0" mnemonicParsing="false" onAction="#BtnSearchOnAction" prefHeight="25.0" prefWidth="136.0" style="-fx-background-radius: 20; -fx-background-color: #ffeaa7;" text="Search" />
+            <TextField fx:id="TxtSearchClamis" layoutX="8.0" layoutY="307.0" prefHeight="27.0" prefWidth="151.0" style="-fx-background-color: transparent; -fx-border-color: #0578; -fx-border-width: 0px 0px 2px 0px;" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="546.0" layoutY="24.0" prefHeight="356.0" prefWidth="365.0" style="-fx-background-color: white;">
+         <children>
+            <TextField fx:id="TxtClaim" layoutX="39.0" layoutY="29.0" prefHeight="25.0" prefWidth="201.0" style="-fx-background-color: transparent; -fx-border-color: #0578; -fx-border-width: 0px 0px 2px 0px;" />
+            <TextField fx:id="TxtPolicy" layoutX="39.0" layoutY="92.0" prefHeight="25.0" prefWidth="201.0" style="-fx-background-color: transparent; -fx-border-color: #0578; -fx-border-width: 0px 0px 2px 0px;" />
+            <TextField fx:id="TxtClaimAmount" layoutX="39.0" layoutY="170.0" prefHeight="25.0" prefWidth="201.0" style="-fx-background-color: transparent; -fx-border-color: #0578; -fx-border-width: 0px 0px 2px 0px;" />
+            <TextField fx:id="TxtDate" layoutX="39.0" layoutY="260.0" prefHeight="25.0" prefWidth="201.0" style="-fx-background-color: transparent; -fx-border-color: #0578; -fx-border-width: 0px 0px 2px 0px;" />
+         </children>
+      </AnchorPane>
+      <TableView fx:id="TbleClaim" layoutX="33.0" layoutY="393.0" onMouseClicked="#OnClickTbleClaim" prefHeight="312.0" prefWidth="583.0">
+         <columns>
+            <TableColumn fx:id="ColClaim" prefWidth="139.0" text="ClaimId" />
+            <TableColumn fx:id="ColPolicy" prefWidth="125.0" text="PolicyId" />
+            <TableColumn fx:id="ColAmount" prefWidth="163.0" text="ClaimAmount" />
+            <TableColumn fx:id="ColDate" prefWidth="155.0" text="ClaimDate" />
+         </columns>
+      </TableView>
+      <AnchorPane layoutX="671.0" layoutY="415.0" prefHeight="241.0" prefWidth="200.0" style="-fx-background-color: #95afc0;">
+         <children>
+            <Button fx:id="BtnSave" layoutX="31.0" layoutY="35.0" mnemonicParsing="false" onAction="#BtnSaveOnAction" prefHeight="25.0" prefWidth="136.0" style="-fx-background-radius: 20; -fx-background-color: #ffeaa7;" text="Save" />
+            <Button fx:id="BtnUpdate" layoutX="31.0" layoutY="86.0" mnemonicParsing="false" onAction="#BtnUpdateOnAction" prefHeight="25.0" prefWidth="136.0" style="-fx-background-radius: 20; -fx-background-color: #ffeaa7;" text="Update" />
+            <Button fx:id="BtnDelect" layoutX="33.0" layoutY="135.0" onAction="#BtnDelectOnAction" prefHeight="25.0" prefWidth="136.0" style="-fx-background-radius: 20; -fx-background-color: #ffeaa7;" text="Delete" />
+            <Button fx:id="BtnBack" layoutX="35.0" layoutY="192.0" mnemonicParsing="false" onAction="#BtnBackOnAction" prefHeight="25.0" prefWidth="136.0" style="-fx-background-radius: 20; -fx-background-color: #9b59b6;" text="Back" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

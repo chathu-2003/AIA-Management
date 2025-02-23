@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="PaymentPage" prefHeight="732.0" prefWidth="920.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.example.aia.aia_management.Controller.PaymentController">
+   <children>
+      <Pane fx:id="PagePayment" layoutX="1.0" layoutY="2.0" prefHeight="732.0" prefWidth="920.0" style="-fx-background-color: #c7ecee;">
+         <children>
+            <AnchorPane layoutX="379.0" layoutY="18.0" prefHeight="398.0" prefWidth="489.0">
+               <children>
+                  <Text layoutX="35.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PaymentId" wrappingWidth="128.13671875">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="33.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PaymentMethod" wrappingWidth="158.13671875">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="34.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Amount" wrappingWidth="128.13671875">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="35.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PolicyId" wrappingWidth="128.13671875">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="TxtPaymentId" layoutX="202.0" layoutY="18.0" prefHeight="25.0" prefWidth="201.0" style="-fx-background-color: transparent; -fx-border-color: #0578; -fx-border-width: 0px 0px 2px 0px;" />
+                  <TextField fx:id="TxtAmount" layoutX="202.0" layoutY="156.0" prefHeight="25.0" prefWidth="201.0" style="-fx-background-color: transparent; -fx-border-color: #0578; -fx-border-width: 0px 0px 2px 0px;" />
+                  <TextField fx:id="TxtMetthod" layoutX="202.0" layoutY="226.0" prefHeight="25.0" prefWidth="201.0" style="-fx-background-color: transparent; -fx-border-color: #0578; -fx-border-width: 0px 0px 2px 0px;" />
+                  <ComboBox fx:id="BoxPolicy" layoutX="202.0" layoutY="92.0" onAction="#BoxPolicyOnAction" prefHeight="25.0" prefWidth="201.0" />
+                  <Button fx:id="BtnSave" layoutX="14.0" layoutY="325.0" mnemonicParsing="false" onAction="#BtnSaveOnAction" prefHeight="25.0" prefWidth="136.0" style="-fx-background-radius: 20; -fx-background-color: #ffeaa7;" text="Save" />
+                  <Button fx:id="BtnUpdate" layoutX="335.0" layoutY="325.0" mnemonicParsing="false" onAction="#BtnUpdateOnAction" prefHeight="25.0" prefWidth="136.0" style="-fx-background-radius: 20; -fx-background-color: #ffeaa7;" text="Update" />
+                  <Button fx:id="BtnDelect" layoutX="177.0" layoutY="325.0" mnemonicParsing="false" onAction="#BtnDelectOnAction" prefHeight="25.0" prefWidth="136.0" style="-fx-background-radius: 20; -fx-background-color: #ffeaa7;" text="Delect" />
+                  <Button fx:id="BtnBack" layoutX="177.0" layoutY="359.0" mnemonicParsing="false" onAction="#BtnBackOnAction" prefHeight="25.0" prefWidth="136.0" style="-fx-background-radius: 20; -fx-background-color: #ffeaa7;" text="Back" />
+               </children>
+            </AnchorPane>
+            <TableView fx:id="TablePayment" layoutX="26.0" layoutY="453.0" onMouseClicked="#OnTablePayment" prefHeight="262.0" prefWidth="560.0">
+              <columns>
+                <TableColumn fx:id="ColPaymentId" prefWidth="139.0" text="PaymentId" />
+                <TableColumn fx:id="ColPolicyId" minWidth="2.0" prefWidth="143.0" text="PolicyId" />
+                  <TableColumn fx:id="ColAmount" prefWidth="139.0" text="Amount" />
+                  <TableColumn fx:id="ColPaymentMethod" prefWidth="139.0" text="PaymentMethod" />
+              </columns>
+            </TableView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="689.0" layoutY="501.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/payment.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="193.0" layoutX="26.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/images%20(9).png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="TxtSearch" layoutX="22.0" layoutY="366.0" prefHeight="27.0" prefWidth="167.0" style="-fx-background-color: transparent; -fx-border-color: #0578; -fx-border-width: 0px 0px 2px 0px;" />
+            <Button fx:id="BtnSearch" layoutX="233.0" layoutY="377.0" mnemonicParsing="false" onAction="#BtnSearchOnAction" prefHeight="25.0" prefWidth="136.0" style="-fx-background-radius: 20; -fx-background-color: #ffeaa7;" text="Search" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

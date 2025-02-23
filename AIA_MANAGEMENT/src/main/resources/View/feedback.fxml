@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="PageFeedBack" prefHeight="732.0" prefWidth="920.0" style="-fx-background-color: #81ecec;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.example.aia.aia_management.Controller.FeedBackController">
+   <children>
+      <Pane prefHeight="818.0" prefWidth="1006.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/images%20(9).png" />
+               </image>
+            </ImageView>
+            <AnchorPane layoutX="294.0" prefHeight="472.0" prefWidth="554.0" style="-fx-background-color: #fab1a0;">
+               <children>
+                  <Text layoutX="35.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ManagerId" wrappingWidth="151.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="35.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FeedbackId" wrappingWidth="151.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="32.0" layoutY="277.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FeedbackDate" wrappingWidth="151.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="34.0" layoutY="352.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Comment" wrappingWidth="151.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="TxtFeed" layoutX="219.0" layoutY="94.0" prefHeight="25.0" prefWidth="201.0" style="-fx-background-color: transparent; -fx-border-color: #0578; -fx-border-width: 0px 0px 2px 0px;" />
+                  <TextField fx:id="TxtManager" layoutX="219.0" layoutY="183.0" prefHeight="25.0" prefWidth="201.0" style="-fx-background-color: transparent; -fx-border-color: #0578; -fx-border-width: 0px 0px 2px 0px;" />
+                  <TextField fx:id="TxtDate" layoutX="219.0" layoutY="257.0" prefHeight="25.0" prefWidth="201.0" style="-fx-background-color: transparent; -fx-border-color: #0578; -fx-border-width: 0px 0px 2px 0px;" />
+                  <TextField fx:id="TxtComment" layoutX="220.0" layoutY="328.0" prefHeight="25.0" prefWidth="201.0" style="-fx-background-color: transparent; -fx-border-color: #0578; -fx-border-width: 0px 0px 2px 0px;" />
+                  <Button fx:id="BtnSave" layoutX="14.0" layoutY="389.0" mnemonicParsing="false" onAction="#BtnSaveOnAction" prefHeight="25.0" prefWidth="136.0" style="-fx-background-radius: 20; -fx-background-color: #ffeaa7;" text="Save" />
+                  <Button fx:id="BtnDelete" layoutX="201.0" layoutY="389.0" mnemonicParsing="false" onAction="#BtnDeleteOnAction" prefHeight="25.0" prefWidth="136.0" style="-fx-background-radius: 20; -fx-background-color: #ffeaa7;" text="Delect" />
+                  <Button fx:id="BtnUpdate" layoutX="353.0" layoutY="389.0" mnemonicParsing="false" onAction="#BtnUpdateOnAction" prefHeight="25.0" prefWidth="136.0" style="-fx-background-radius: 20; -fx-background-color: #ffeaa7;" text="Update" />
+                  <Button fx:id="BtnBack" layoutX="418.0" layoutY="442.0" mnemonicParsing="false" onAction="#BtnBackOnAction" prefHeight="25.0" prefWidth="136.0" style="-fx-background-radius: 20; -fx-background-color: #ffeaa7;" text="Back" />
+                  <Text layoutX="200.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FeedBack" wrappingWidth="137.13671875">
+                     <font>
+                        <Font name="Corbel Light" size="32.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="57.0" fitWidth="258.0" layoutX="383.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/download.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="TxtSearchfeedBack" layoutX="19.0" layoutY="437.0" prefHeight="27.0" prefWidth="160.0" style="-fx-background-color: transparent; -fx-border-color: #0578; -fx-border-width: 0px 0px 2px 0px;" />
+                  <Button fx:id="BtnSearch" layoutX="193.0" layoutY="442.0" mnemonicParsing="false" onAction="#BtnSearchOnAction" prefHeight="25.0" prefWidth="136.0" style="-fx-background-radius: 20; -fx-background-color: #ffeaa7;" text="Search" />
+               </children>
+            </AnchorPane>
+            <TableView fx:id="TableFeedBack" layoutX="57.0" layoutY="533.0" onMouseClicked="#OnClickTable" prefHeight="280.0" prefWidth="894.0">
+              <columns>
+                <TableColumn fx:id="ColFeed" prefWidth="144.0" text="FeedbackId" />
+                <TableColumn fx:id="ColManager" prefWidth="177.0" text="ManagerId" />
+                  <TableColumn fx:id="ColDate" prefWidth="157.0" text="FeedbackDate" />
+                  <TableColumn fx:id="ColComment" prefWidth="415.0" text="Comment" />
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
